@@ -1,0 +1,15 @@
+uniform samplerCube cubemapTex;
+uniform vec4 fluidColor;
+
+varying float fThick;
+varying vec3 reflectvec;
+varying vec3 refractvec;
+
+void main(void)
+{
+	vec4 refl_color = textureCube(cubemapTex, reflectvec);    
+	vec4 refr_color = textureCube(cubemapTex, refractvec);    
+    
+	gl_FragColor = (1 - fThick) * refl_color + fThick * fluidColor;
+	//gl_FragColor = refr_color;
+}

@@ -1,0 +1,31 @@
+0. GLUI the CF params.
+
+
+1. CUDA on Rendering
+
+[IN] particle-position + initial depth tex
+
+- Thickness
+- CurvFlow
+- Normal
+
+[OUT] Normal + Thickness
+
+
+2. CUDA on Physical Model
+	
+[In] particle-position + scene\grid info + barrier info
+
+[Out] particle-position
+
+-
+Performance
+[40 Iter]: 
+IO : 0.01, Thick : 0.07, CF : 0.91, NM : 0.01	[0.10]
+IO : 0.00, Thick : 0.08, CF : 0.91, NM : 0.01	[0.12]
+IO : 0.00, Thick : 0.07, CF : 0.92, NM : 0.01	[0.12]
+IO : 0.00, Thick : 0.06, CF : 0.93, NM : 0.01	[0.11]
+IO : 0.00, Thick : 0.07, CF : 0.92, NM : 0.01	[0.11]
+IO : 0.00, Thick : 0.07, CF : 0.92, NM : 0.01	[0.12]
+IO : 0.00, Thick : 0.07, CF : 0.92, NM : 0.01	[0.12]
+IO : 0.00, Thick : 0.04, CF : 0.95, NM : 0.01	[0.08]
